@@ -14,7 +14,7 @@ config({ path: "./config/config.env" });
 
 app.use(
   cors({
-    origin: [`https://job-portal-frontend-lovat.vercel.app/`],
+    origin: [`https://job-portal-frontend-self-nine.vercel.app/`],
     method: ["GET", "POST", "DELETE", "PUT"],
     credentials: true,
   })
