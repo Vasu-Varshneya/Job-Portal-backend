@@ -1,9 +1,7 @@
 import dotenv from 'dotenv';
 dotenv.config({ path: './config/config.env' }); // ✅ Load environment variables
-
 import app from './app.js'; // ✅ Your Express app
 import { v2 as cloudinary } from 'cloudinary';
-
 // ✅ Configure Cloudinary
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,

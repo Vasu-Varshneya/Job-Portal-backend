@@ -34,5 +34,12 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/job", jobRouter);
 app.use("/api/v1/application",applicationRouter)
 dbconnection();
+app.get('/api/cron-run', (req, res) => {
+  if (req.query.secret !== process.env.CRON_SECRET) {
+    return res.status(403).send('Forbidden');
+  }
+  // perform task
+});
+
 app.use(errorMiddleware);
 export default app;

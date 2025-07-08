@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 dotenv.config();
 const dbconnection  = ()=>{
-    mongoose.connect(process.env.DB_URL,{
+    mongoose.connect("mongodb+srv://Vasu:vasuvarshney@cluster0.l24ojal.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
         dbName:"Job_Portal"
     }).then(()=>{
         console.log("MongoDB connected successfully");
